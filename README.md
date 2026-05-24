@@ -1,39 +1,26 @@
-# Gym Tracker (GitHub Pages)
+# Gym Tracker
 
-Standalone deploy for the 12-week gym tracker health module only.
+12-week transformation gym tracker — standalone web app with offline `localStorage` persistence.
+
+Live site: https://bhavya007-17.github.io/gym-tracker/
 
 ## Local development
 
 ```bash
-cd gym-tracker
 npm install
 npm run dev
 ```
 
 Open `http://localhost:5173`.
 
-## Deploy to GitHub Pages
+## GitHub Pages
 
-1. Create a GitHub repository (for example `gym-tracker`).
-2. Push this repo to GitHub:
+This repo deploys automatically via GitHub Actions on push to `main`.
 
-```bash
-git add .
-git commit -m "Add standalone gym tracker for GitHub Pages"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-git push -u origin main
-```
-
-3. In GitHub: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
-4. Push to `main`/`master` (or run the workflow manually). The workflow builds only `gym-tracker/` and publishes it.
-
-Your site will be available at:
-
-`https://YOUR_USERNAME.github.io/YOUR_REPO/`
+1. Go to **Settings → Pages → Build and deployment → Source: GitHub Actions**
+2. Push to `main` (or run the workflow manually from the Actions tab)
 
 ## Notes
 
-- All workout/nutrition data is stored in browser `localStorage` (offline-first).
-- For a user site (`YOUR_USERNAME.github.io` repo), set `VITE_BASE_PATH=/` in the workflow before building.
-- This folder is independent from the main Nexus dashboard API/backend.
+- All workout/nutrition data stays in your browser (`localStorage`).
+- No backend required — works fully offline after first load.
