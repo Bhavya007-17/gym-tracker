@@ -2,7 +2,10 @@
 
 12-week transformation gym tracker — standalone web app with offline `localStorage` persistence.
 
-Live site: https://bhavya007-17.github.io/gym-tracker/
+## Live sites
+
+- GitHub Pages: https://bhavya007-17.github.io/gym-tracker/
+- Firebase: https://gym-tracker-14785.web.app (after deploy)
 
 ## Local development
 
@@ -13,12 +16,35 @@ npm run dev
 
 Open `http://localhost:5173`.
 
+## Deploy to Firebase
+
+Project: [gym-tracker-14785](https://console.firebase.google.com/project/gym-tracker-14785/hosting)
+
+### One-time setup
+
+1. Install the Firebase CLI (included as a dev dependency after `npm install`).
+2. Log in: `npx firebase login`
+3. Confirm the project: `npx firebase use gym-tracker-14785`
+
+### Deploy from your machine
+
+```bash
+npm run deploy:firebase
+```
+
+This builds with `VITE_BASE_PATH=/` and publishes the `dist/` folder to Firebase Hosting.
+
+### Auto-deploy via GitHub Actions
+
+1. In [Firebase Console → Project settings → Service accounts](https://console.firebase.google.com/project/gym-tracker-14785/settings/serviceaccounts/adminsdk), generate a new private key (JSON).
+2. In GitHub repo **Settings → Secrets → Actions**, add `FIREBASE_SERVICE_ACCOUNT` with the full JSON contents.
+3. Push to `main` — the **Deploy to Firebase Hosting** workflow runs automatically.
+
 ## GitHub Pages
 
-This repo deploys automatically via GitHub Actions on push to `main`.
+Deploys via GitHub Actions on push to `main`.
 
-1. Go to **Settings → Pages → Build and deployment → Source: GitHub Actions**
-2. Push to `main` (or run the workflow manually from the Actions tab)
+1. **Settings → Pages → Source: GitHub Actions**
 
 ## Notes
 

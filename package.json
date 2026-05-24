@@ -6,8 +6,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:firebase": "cross-env VITE_BASE_PATH=/ vite build",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "deploy:firebase": "npm run build:firebase && firebase deploy --only hosting"
   },
   "dependencies": {
     "date-fns": "^4.2.1",
@@ -17,6 +19,8 @@
     "zustand": "^5.0.13"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
+    "firebase-tools": "^14.0.0",
     "@tailwindcss/postcss": "^4",
     "@types/react": "^19",
     "@types/react-dom": "^19",
