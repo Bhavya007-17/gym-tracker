@@ -1,5 +1,8 @@
 # Gym Tracker
 
+![Language](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white) ![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=white) ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?logo=firebase&logoColor=black) ![Status](https://img.shields.io/badge/status-stable-brightgreen)
+
+
 12-week transformation gym tracker — standalone web app with offline `localStorage` persistence.
 
 ## Live sites
@@ -50,3 +53,12 @@ Deploys via GitHub Actions on push to `main`.
 
 - All workout/nutrition data stays in your browser (`localStorage`).
 - No backend required — works fully offline after first load.
+## Status
+
+Stable — deployed and usable. Workout/nutrition data is stored client-side in `localStorage`.
+
+TODO: add a license (no license file is currently present in this repo).
+
+## Contact
+
+Bhavya Dosi — [LinkedIn](https://www.linkedin.com/in/bhavya-dosi)
