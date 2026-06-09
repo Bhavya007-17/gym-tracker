@@ -57,7 +57,9 @@ Deploys via GitHub Actions on push to `main`.
 
 Stable — deployed and usable. Workout/nutrition data is stored client-side in `localStorage`.
 
-TODO: add a license (no license file is currently present in this repo).
+## License
+
+MIT — see the [LICENSE](LICENSE) file.
 
 ## Contact
 
